@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="Grados Kelvin"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/txt_gradosKelvin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/txt_titulo"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/fondorectangular"
+        android:gravity="center"
+        android:text="@string/conversor_temperatura"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tamTitulo1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_grados"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:ems="10"
+        android:hint="@string/edt_dame_grados"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/txt_titulo"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/txt_titulo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_farenheit"
+        android:layout_width="67dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="108dp"
+        android:hint="@string/txt_grados_farenheit"
+        android:textColorHint="@color/white"
+        android:textSize="@dimen/tamTitulo1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edt_grados"
+        app:layout_constraintStart_toStartOf="@+id/edt_grados"
+        app:layout_constraintTop_toBottomOf="@+id/edt_grados" />
+
+    <TextView
+        android:id="@+id/txt_gradosKelvin"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="80dp"
+        android:hint="@string/txt_grados_kelvin"
+        android:textColorHint="@color/white"
+        android:textSize="@dimen/tamTitulo1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txt_farenheit"
+        app:layout_constraintStart_toStartOf="@+id/txt_farenheit"
+        app:layout_constraintTop_toBottomOf="@+id/txt_farenheit" />
+
+    <Button
+        android:id="@+id/btn_convertir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:onClick="convertir"
+        android:text="@string/btn_convertir"
+        app:layout_constraintEnd_toEndOf="@+id/edt_grados"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_grados"
+        app:layout_constraintTop_toBottomOf="@+id/txt_gradosKelvin" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="276dp"
+        android:text="Grados Farenheit"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/txt_farenheit"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="@+id/edt_grados"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
